@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progressbar 
+    </title>
+    <style>
+          *{
+              box-sizing: border-box;
+          }
+          .skill{
+              background-color: rgb(222, 207, 207);
+              width: 800px;
+              padding: 20px;
+              margin: auto ;
+          }
+          .skill li{
+              list-style: none;
+              margin: 50px 0;
+              font-weight: bolder;
+              position: relative;
+
+          }
+          .skill li::before{
+              content: '';
+              position: absolute;
+            background: rgb(170,167,173);
+            width: 100%;
+            height: 25px;
+            top: calc(100% + 5px);
+          border-radius: 1000px;
+            left: 0;
+
+
+          }
+          .skill li::after{
+              content: '';
+              position: absolute;
+            background: rgb(38, 4, 72);
+            width:0;
+            height: 25px;
+            top: calc(100% + 5px);
+          border-radius: 1000px;
+            left: 0;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+          }
+          .skill li.html::after{
+              animation-name: html;
+             
+          }
+          @keyframes html{
+                  to{
+                      width: 85%;
+                      background:green;
+                  }
+              }
+
+              .skill li.css::after{
+              animation-name: css;
+             
+          }
+          @keyframes css{
+                  to{
+                      width: 75%;
+                      background:red;
+                  }
+              }
+              
+              .skill li.boots::after{
+              animation-name: boots;
+             
+          }
+          @keyframes boots{
+                  to{
+                      width: 65%;
+                      background:blue;
+                  }
+              }
+
+              .skill li.js::after{
+              animation-name: js;
+             
+          }
+          @keyframes js{
+                  to{
+                      width: 50%;
+                      background:goldenrod;
+                  }
+              }
+              .skill li.react::after{
+              animation-name: react;
+             
+          }
+          @keyframes react{
+                  to{
+                      width: 25%;
+                      background:black;
+                  }
+              }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="skill">
+        <ul>
+            <li class="html">HTML</li>
+            <li class="js">Javascript</li>
+            <li class="react">React.JS</li>
+            <li class="css">CSS</li>
+            <li class="boots">Bootstrap</li>
+
+
+        </ul>
+    </div>
+</body>
+</html>

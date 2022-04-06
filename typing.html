@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Typing Animation</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ferdoka one',cursive; 
+        outline: none;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+}
+h1{
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 5s steps(32) infinite;
+    border-right: 3px solid black;
+    font-size: 50px;
+
+}
+@keyframes text{
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 27ch;
+
+    }
+}
+
+</style>
+</head>
+<body>
+    <h1>Hello,I am Mamun.How are you?</h1>
+</body>
+</html>
